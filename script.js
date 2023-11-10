@@ -51,7 +51,7 @@ function showProducts(product) {
         <p class="card-text badge rounded-pill bg-dark mb-2">${product.brand}</p>
         
         <div>
-            <button class="btn btn-danger" onclick="./detail.html">Dettagli</button>
+            <button class="btn btn-danger" onclick="..."><a href="./detail.html?id=${product._id}">Dettagli</a></button>
          
         </div>
       </div>
