@@ -49,12 +49,10 @@ function showProducts(product) {
       <div class="card-body">
         <h5 class="card-title">${product.name}</h5>
         <p class="card-text badge rounded-pill bg-dark mb-2">${product.brand}</p>
-        <p class="fs-4">${product.price}€</p>
+        
         <div>
-            <button class="btn btn-danger" onclick="addToCart(event, '${product.asin}')">Compra ora</button>
-            <button class="btn btn-outline-danger" onclick="skipMe(event)">
-              Scarta
-            </button>
+            <button class="btn btn-danger" onclick="./detail.html">Dettagli</button>
+         
         </div>
       </div>
     </div>
