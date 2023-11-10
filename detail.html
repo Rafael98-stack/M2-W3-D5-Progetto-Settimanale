@@ -34,11 +34,11 @@
         window.onload = () => {
 const productContainer = document.getElementById("productsContainer")
 
-            fetch("https://striveschool-api.herokuapp.com/api/product" + productId {
+fetch("https://striveschool-api.herokuapp.com/api/product" ,  {
       headers: {
       Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTRkZWU1OTI1NGU4ODAwMTgzZjE4ODciLCJpYXQiOjE2OTk2MDYxMDUsImV4cCI6MTcwMDgxNTcwNX0.juXYFskS41SPH5GU6ZS-W7usUndyOnji8VFdINzY0yQ"
       }
-      })
+      }+ productContainer)
 .then(resp => resp.json())
 .then(productObj => {
     productContainer.innerHTML=`
