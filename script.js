@@ -42,9 +42,9 @@ function showProducts(product) {
    
 
       productContainer.innerHTML += `
-  <div class="p-3">
-    <div class="card shadow-sm h-100">
-      <img src="${product.imgUrl}" class="img-fluid card-img-top" alt="${product.title
+  <div class="d-flex justify-content-center p-3 col-2">
+    <div class="card shadow-sm ">
+      <img src="${product.imageUrl}" class="img-fluid card-img-top w-100" alt="${product.title
           }">
       <div class="card-body">
         <h5 class="card-title">${product.name}</h5>
