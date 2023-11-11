@@ -28,22 +28,22 @@
     </main>
     <script>
         const param = new URLSearchParams(window.location.search)
-        const productId = params.get("id")
+        const productId = param.get("id")
         console.log("RESOURCE ID: ", productId)
 
         window.onload = () => {
 const productContainer = document.getElementById("productsContainer")
 
-fetch("https://striveschool-api.herokuapp.com/api/product" ,  {
+fetch(`https://striveschool-api.herokuapp.com/api/product/${productId}` ,  {
       headers: {
       Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTRkZWU1OTI1NGU4ODAwMTgzZjE4ODciLCJpYXQiOjE2OTk2MDYxMDUsImV4cCI6MTcwMDgxNTcwNX0.juXYFskS41SPH5GU6ZS-W7usUndyOnji8VFdINzY0yQ"
       }
-      }+ productContainer)
+      })
 .then(resp => resp.json())
 .then(productObj => {
     productContainer.innerHTML=`
     <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="${productObj.imgUrl}" alt="Card image cap">
+        <img class="card-img-top" src="${productObj.imageUrl}" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">${productObj.name}</h5>
           <p class="card-text">${productObj.description}</p>
