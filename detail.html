@@ -48,6 +48,7 @@ fetch(`https://striveschool-api.herokuapp.com/api/product/${productId}` ,  {
           <h5 class="card-title">${productObj.name}</h5>
           <p class="card-text">${productObj.description}</p>
           <p class="card-text">${productObj.brand}</p>
+          <p class="card-text">${productObj.price + "$"}</p>
 
         </div>
     `
